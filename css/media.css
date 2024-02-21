@@ -1,0 +1,100 @@
+@media (max-width: 475px) {
+    header > .container > .menu {
+        display: none;
+    }
+    .first_block > .container > .search_block > .search_form {
+        min-width: 100%;
+        max-width: 100%;
+    }
+    .first_block > .container > .homepage_categories > ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .first_block > .container > .homepage_categories > ul > li {
+        margin-right: 10px;
+        flex-basis: calc(50% - 15px);
+        margin-bottom: 10px;
+    }
+    .first_block > .container > .homepage_categories > ul > li:last-child {
+        margin-right: 10px;
+    }
+    .first_block > .container > .partners_info > .partner_block {
+        flex-wrap: wrap;
+    }
+    .first_block > .container > .partners_info > .partner_block > .partner_block_text {
+        width: 100%;
+        padding-right: 0;
+        border-right: 0;
+    }
+    .first_block > .container > .partners_info > .partner_block > .partner_block_text > h3, .first_block > .container > .partners_info > .partner_block > .partner_block_text > p {
+        text-align: center;
+    }
+    .first_block > .container > .partners_info > .partner_block > .partner_block_info.mobile {
+        display: flex;
+    }
+    .first_block > .container > .partners_info > .partner_block > .partner_block_info.desktop {
+        display: none;
+    }
+    .first_block > .container > .partners_info > .partner_block > .partner_block_info {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .first_block > .container > .partners_info > .partner_block > .partner_block_info > img {
+        margin-left: 0;
+        margin-bottom: 1rem;
+    }
+    .first_block > .container > .partners_info > .partner_block > .partner_block_info > .fullname_partner {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-bottom: 1rem;
+    }
+    .first_block > .container > .partners_info > .partner_block > .partner_block_info > .fullname_partner > div {
+        width: 100%;
+        text-align: center;
+    }
+    .casinos_col, .country_casinos {
+        flex-wrap: wrap;
+        margin: 0;
+    }
+    .casinos_col > .casinos_item, .country_casinos > .country_item {
+        width: 50%;
+        margin-right: 5px;
+        margin-bottom: 15px;
+        flex-basis: calc(50% - 15px);
+    }
+    .blog_info > .container > .row > .col-sm-3 {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-bottom: 2rem;
+    }
+    .text_block > .container > .row > .col-sm-6 > img.text_block_image {
+        width: 70%;
+        bottom: -5rem;
+        right: 4rem;
+    }
+    footer > .container:first-child {
+        flex-wrap: wrap;
+    }
+    footer > .container > .footer_menus {
+        width: 100%;
+        padding-right: 0;
+    }
+    footer > .container > .block_subscribe {
+        width: 100%;
+        margin-top: 2rem;
+    }
+    footer > .container > .awards > ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    footer > .container > .awards > ul > li {
+        margin-bottom: 2rem;
+    }
+    footer > .container > .awards > ul > li:last-child {
+        margin-bottom: 0;
+    }
+}
