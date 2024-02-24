@@ -7,6 +7,9 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
 }
+body.other_bg {
+    background-image: none;
+}
 ul {
     padding: 0;
     margin: 0;
@@ -41,6 +44,18 @@ img {
 
 header {
     padding: 20px 0px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    transition: background-color 0.5s ease;
+}
+header.sticky {
+    background: url("../images/main_bg.jpg");
+    background-repeat: no-repeat;
+    transition: background-color 0.5s ease;
 }
 header > .container {
     display: flex;
@@ -60,6 +75,16 @@ header > .container > .menu > ul > li {
     font-size: 17px;
     font-weight: 400;
     margin-right: 2rem;
+    position: relative;
+}
+header > .container > .menu > ul > li.active::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, #A5A4A4 0%, #FFFFFF 100%);
 }
 /* header > .container > .menu > ul > li.active {
     border-bottom: ;
@@ -69,7 +94,13 @@ header > .container > .menu > ul > li:last-child {
 }
 
 .first_block {
-    padding: 4rem 0 0 0;
+    padding: 10rem 0 0 0;
+}
+.first_block.bonuses_page {
+    background-image: url("../images/other_bg.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 .first_block > .container > .search_block, .first_block > .container > .homepage_categories, .first_block > .container > .partners_info {
     display: flex;
@@ -114,10 +145,18 @@ header > .container > .menu > ul > li:last-child {
     text-align: center;
     margin-bottom: 2rem;
 }
+.first_block > .container > .homepage_categories > p {
+    margin-bottom: 2rem;
+}
 .first_block > .container > .homepage_categories > ul {
     display: flex;
+    width: 100%;
+    justify-content: center;
 }
 .first_block > .container > .homepage_categories > ul > li {
+    min-width: 135px;
+    max-width: 135px;
+    width: 100%;
     background-color: #215479;
     padding: 30px 10px;
     border-radius: 10px;
@@ -132,12 +171,16 @@ header > .container > .menu > ul > li:last-child {
     justify-content: center;
     align-items: center;
 }
+.first_block > .container > .homepage_categories > ul > li > a > img {
+    height: 75px;
+}
 .first_block > .container > .homepage_categories > ul > li > a > span {
     width: 100%;
     display: flex;
     justify-content: center;
     color: #fff;
     margin-top: 10px;
+    text-align: center;
 }
 .first_block > .container > .partners_info > .partner_block {
     display: flex;
@@ -146,6 +189,11 @@ header > .container > .menu > ul > li:last-child {
     background-color: #fff;
     padding: 40px;
     margin-bottom: 5rem;
+}
+.first_block.bonuses_page > .container > .partners_info > .partner_block {
+    margin-bottom: -6.5rem;
+    border: 1px solid;
+    border-color: rgba(226, 226, 226, 1);
 }
 .first_block > .container > .partners_info > .partner_block > .partner_block_text {
     width: 75%;
@@ -185,6 +233,9 @@ header > .container > .menu > ul > li:last-child {
 .second_block {
     padding: 0 0 4rem 0;
 }
+.second_block.bonuses_page {
+    padding: 11rem 0 4rem 0;
+}
 .second_block > h2 {
     text-align: center;
     margin-bottom: 2.5rem;
@@ -201,6 +252,13 @@ header > .container > .menu > ul > li:last-child {
     margin: 0 10px;
     border-radius: 10px;
     padding: 0 2rem 1rem 2rem;
+}
+
+.second_block.bonuses_page > .casinos .slick-slide {
+    box-shadow: 0px 4px 42.6px rgba(0, 0, 0, 0.1);
+}
+.second_block.bonuses_page > .casinos .slick-track {
+    padding-bottom: 4rem;
 }
 .second_block > .casinos .slick-list {
     margin: 0 -10px;
@@ -224,6 +282,12 @@ header > .container > .menu > ul > li:last-child {
 .casinos_block {
     width: 100%;
     margin-bottom: 4rem;
+}
+.casinos_block.bonus {
+    background: url("../images/bonus-page/bonus_bg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 4rem 0;
 }
 .casinos_block > h2 {
     text-align: center;
@@ -543,4 +607,34 @@ footer > .container > .awards > ul > li {
 }
 footer > .container > .awards > ul > li > img {
     margin-right: 10px;
+}
+
+/* Bonuses page */
+
+.article_blocks {
+    width: 100%;
+    padding-bottom: 4rem;
+}
+.article_blocks .article_block {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+
+}
+.article_blocks .article_info {
+    width: 100%;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    color: #fff;
+    padding: 15px 25px;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
+}
+.article_blocks .article_block > .article_info > span {
+    text-transform: uppercase;
+    font-weight: 400;
+}
+.article_blocks .article_block > .article_info > h3 {
+    font-size: 20px;
+    font-weight: 700;
 }
