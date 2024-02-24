@@ -2,6 +2,15 @@
     header > .container > .menu {
         display: none;
     }
+    header > .container {
+        justify-content: space-between;
+    }
+    header > .container > .burger_menu_icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 50px;
+    }
     .first_block > .container > .search_block > .search_form {
         min-width: 100%;
         max-width: 100%;
@@ -95,6 +104,15 @@
         margin-bottom: 2rem;
     }
     footer > .container > .awards > ul > li:last-child {
+        margin-bottom: 0;
+    }
+
+    /* Bonuses page */
+
+    .article_blocks .col-sm-6, .article_blocks .col-sm-4 {
+        margin-bottom: 1rem;
+    }
+    .article_blocks .col-sm-6:last-child, .article_blocks .col-sm-4:last-child {
         margin-bottom: 0;
     }
 }

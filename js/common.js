@@ -20,7 +20,8 @@ $('.casinos').slick({
             breakpoint: 600,
             settings: {
                 slidesToShow: 3,
-                slidesToScroll: 3
+                slidesToScroll: 3,
+                centerPadding: '30px'
             }
         },
         {
@@ -28,6 +29,7 @@ $('.casinos').slick({
             settings: {
                 slidesToShow: 2,
                 slidesToScroll: 2,
+                centerPadding: '80px'
             }
         }
     ]
@@ -42,6 +44,35 @@ document.addEventListener("DOMContentLoaded", function() {
             header.classList.add("sticky");
         } else {
             header.classList.remove("sticky");
+        }
+    });
+});
+
+// mobile menu
+
+window.addEventListener('DOMContentLoaded', () => {
+    const hamburger = document.querySelector('.burger_menu_icon');
+    const menu = document.querySelector('.mobile_menu');
+    const menuClose = document.querySelector('.close_btn');
+
+    // hamburger.addEventListener('click', () => {
+    //     menu.classList.add('menu_active');
+    //     hamburger.classList.add('menu_active');
+    // });
+
+    // menuClose.addEventListener('click', () => {
+    //     menu.classList.remove('menu_active');
+    // });
+
+    hamburger.addEventListener("click", function() {
+        var isOpen = menu.classList.contains("open");
+    
+        if (isOpen) {
+            menu.classList.remove("open");
+            hamburger.classList.remove("menu_active");
+        } else {
+            menu.classList.add("open");
+            hamburger.classList.add("menu_active");
         }
     });
 });
