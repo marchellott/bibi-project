@@ -115,4 +115,44 @@
     .article_blocks .col-sm-6:last-child, .article_blocks .col-sm-4:last-child {
         margin-bottom: 0;
     }
+
+    /* Casino page */
+
+    .casino_content > .container {
+        flex-wrap: wrap;
+    }
+    .casino_content > .container > .casino_content_block {
+        width: 100%;
+    }
+    .casino_single_info {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .casino_single_info > .casino_single_logo {
+        margin-right: 0;
+        margin-bottom: 1rem;
+    }
+    .casino_single_info > .casino_single_rating > h2 {
+        text-align: center;
+    }
+    .casino_single_info > .casino_single_rating > ul > li {
+        justify-content: center;
+    }
+    .casino_single_info > .casino_single_rating > ul > li:last-child {
+        margin-right: 0;
+    }
+    .casino_single_info > .casino_single_rating > ul > li > div {
+        text-align: center;
+    }
+    .casino_single_info > .casino_single_rating > ul > li > span {
+        text-align: center;
+    }
+    .casino_first_banner.mobile {
+        display: flex;
+        margin-bottom: 0;
+        margin-top: 1rem;
+    }
+    .casino_content > .container > .casino_sidebar {
+        display: none;
+    }
 }
